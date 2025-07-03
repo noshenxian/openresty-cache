@@ -6,3 +6,5 @@ proxy_temp/
 scgi_temp/
 uwsgi_temp/
 logs/
+.DS_Store
+.DS_Store?
