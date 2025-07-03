@@ -342,7 +342,7 @@ function deleteCurrentCache() {
     }
 }
 
-// 清除缓存
+// 清除缓存 - 优化版本
 async function flushCache() {
     const prefix = document.getElementById('prefixInput').value;
     const confirmMessage = prefix ? 
@@ -353,6 +353,10 @@ async function flushCache() {
         return;
     }
     
+    // 显示加载状态
+    document.getElementById('flushResult').className = 'alert alert-info';
+    document.getElementById('flushResult').textContent = '正在清除缓存...';
+    
     try {
         const response = await fetch('/api/cache/flush', {
             method: 'POST',
@@ -361,6 +365,12 @@ async function flushCache() {
             },
             body: JSON.stringify({ prefix: prefix })
         });
+        
+        // 检查HTTP状态码
+        if (!response.ok) {
+            throw new Error(`HTTP错误: ${response.status}`);
+        }
+        
         const data = await response.json();
         
         if (data.success) {
@@ -376,20 +386,25 @@ async function flushCache() {
         } else {
             document.getElementById('flushResult').className = 'alert alert-danger';
             document.getElementById('flushResult').textContent = 
-                `清除失败: ${data.error}`;
+                `清除失败: ${data.error || '未知错误'}`;
+            console.error('清除缓存失败:', data.error);
         }
     } catch (error) {
         console.error('清除缓存失败:', error);
         document.getElementById('flushResult').className = 'alert alert-danger';
-        document.getElementById('flushResult').textContent = '清除缓存失败';
+        document.getElementById('flushResult').textContent = `清除缓存失败: ${error.message || '连接服务器失败'}`;
     }
 }
 
-// 清除所有缓存
+// 清除所有缓存 - 优化版本
 async function flushAllCache() {
     if (!confirm('确定要清除所有缓存吗？这将删除系统中的所有缓存数据！')) {
         return;
     }
+    
+    // 显示加载状态
+    document.getElementById('flushResult').className = 'alert alert-info';
+    document.getElementById('flushResult').textContent = '正在清除所有缓存...';
     
     try {
         const response = await fetch('/api/cache/flush', {
@@ -399,6 +414,12 @@ async function flushAllCache() {
             },
             body: JSON.stringify({ prefix: '' })
         });
+        
+        // 检查HTTP状态码
+        if (!response.ok) {
+            throw new Error(`HTTP错误: ${response.status}`);
+        }
+        
         const data = await response.json();
         
         if (data.success) {
@@ -414,12 +435,13 @@ async function flushAllCache() {
         } else {
             document.getElementById('flushResult').className = 'alert alert-danger';
             document.getElementById('flushResult').textContent = 
-                `清除失败: ${data.error}`;
+                `清除失败: ${data.error || '未知错误'}`;
+            console.error('清除所有缓存失败:', data.error);
         }
     } catch (error) {
-        console.error('清除缓存失败:', error);
+        console.error('清除所有缓存失败:', error);
         document.getElementById('flushResult').className = 'alert alert-danger';
-        document.getElementById('flushResult').textContent = '清除缓存失败';
+        document.getElementById('flushResult').textContent = `清除所有缓存失败: ${error.message || '连接服务器失败'}`;
     }
 }
 
@@ -477,4 +499,185 @@ function filterMissUrls() {
             row.style.display = 'none';
         }
     });
+}
+
+// 添加一个通用的带重试功能的API调用函数
+async function callApiWithRetry(url, method, body, maxRetries = 2) {
+    let retries = 0;
+    
+    while (retries <= maxRetries) {
+        try {
+            const response = await fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body ? JSON.stringify(body) : undefined
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP错误: ${response.status}`);
+            }
+            
+            return await response.json();
+        } catch (error) {
+            retries++;
+            console.warn(`API调用失败，尝试重试 ${retries}/${maxRetries}:`, error);
+            
+            if (retries > maxRetries) {
+                throw error;
+            }
+            
+            // 等待一段时间再重试
+            await new Promise(resolve => setTimeout(resolve, 1000 * retries));
+        }
+    }
+}
+
+// 使用重试机制的清除缓存函数
+async function flushCacheWithRetry() {
+    const prefix = document.getElementById('prefixInput').value;
+    const confirmMessage = prefix ? 
+        `确定要清除所有以 "${prefix}" 开头的缓存吗？` : 
+        '确定要清除所有缓存吗？';
+    
+    if (!confirm(confirmMessage)) {
+        return;
+    }
+    
+    document.getElementById('flushResult').className = 'alert alert-info';
+    document.getElementById('flushResult').textContent = '正在清除缓存...';
+    
+    try {
+        const data = await callApiWithRetry('/api/cache/flush', 'POST', { prefix: prefix });
+        
+        if (data.success) {
+            document.getElementById('flushResult').className = 'alert alert-success';
+            document.getElementById('flushResult').textContent = 
+                `清除成功，共清除 ${data.count} 个缓存项`;
+                
+            // 重新加载数据
+            loadDashboardData();
+            if (currentSection === 'keys') {
+                loadKeysData();
+            }
+        } else {
+            document.getElementById('flushResult').className = 'alert alert-danger';
+            document.getElementById('flushResult').textContent = 
+                `清除失败: ${data.error || '未知错误'}`;
+        }
+    } catch (error) {
+        console.error('清除缓存失败:', error);
+        document.getElementById('flushResult').className = 'alert alert-danger';
+        document.getElementById('flushResult').textContent = `清除缓存失败: ${error.message || '连接服务器失败'}`;
+    }
+}
+
+// 检查Redis连接状态
+async function checkRedisConnection() {
+    try {
+        const response = await fetch('/api/cache/status');
+        if (!response.ok) {
+            return false;
+        }
+        
+        const data = await response.json();
+        return data.redis_connected === true;
+    } catch (error) {
+        console.error('检查Redis连接失败:', error);
+        return false;
+    }
+}
+
+// 在页面加载时检查Redis连接
+async function initializeApp() {
+    // 检查Redis连接
+    const redisConnected = await checkRedisConnection();
+    
+    if (!redisConnected) {
+        // 显示Redis连接警告
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-warning';
+        alertDiv.textContent = 'Redis连接失败，部分功能可能无法正常工作。';
+        document.querySelector('.container').prepend(alertDiv);
+    }
+    
+    // 加载初始数据
+    loadDashboardData();
+    loadKeysData();
+}
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', initializeApp);
+
+// 设置按钮加载状态
+function setButtonLoading(buttonId, isLoading) {
+    const button = document.getElementById(buttonId);
+    if (!button) return;
+    
+    if (isLoading) {
+        button.disabled = true;
+        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 处理中...';
+    } else {
+        button.disabled = false;
+        button.innerHTML = button.getAttribute('data-original-text') || button.innerHTML;
+    }
+}
+
+// 在页面加载时保存原始按钮文本
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.setAttribute('data-original-text', button.innerHTML);
+    });
+});
+
+// 使用按钮状态管理的清除缓存函数
+async function flushCacheWithButtonState() {
+    const prefix = document.getElementById('prefixInput').value;
+    const confirmMessage = prefix ? 
+        `确定要清除所有以 "${prefix}" 开头的缓存吗？` : 
+        '确定要清除所有缓存吗？';
+    
+    if (!confirm(confirmMessage)) {
+        return;
+    }
+    
+    setButtonLoading('flushButton', true);
+    document.getElementById('flushResult').className = 'alert alert-info';
+    document.getElementById('flushResult').textContent = '正在清除缓存...';
+    
+    try {
+        const response = await fetch('/api/cache/flush', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ prefix: prefix })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            document.getElementById('flushResult').className = 'alert alert-success';
+            document.getElementById('flushResult').textContent = 
+                `清除成功，共清除 ${data.count} 个缓存项`;
+                
+            // 重新加载数据
+            loadDashboardData();
+            if (currentSection === 'keys') {
+                loadKeysData();
+            }
+        } else {
+            document.getElementById('flushResult').className = 'alert alert-danger';
+            document.getElementById('flushResult').textContent = 
+                `清除失败: ${data.error || '未知错误'}`;
+        }
+    } catch (error) {
+        console.error('清除缓存失败:', error);
+        document.getElementById('flushResult').className = 'alert alert-danger';
+        document.getElementById('flushResult').textContent = `清除缓存失败: ${error.message || '连接服务器失败'}`;
+    } finally {
+        setButtonLoading('flushButton', false);
+    }
 }

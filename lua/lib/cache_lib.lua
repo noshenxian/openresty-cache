@@ -298,6 +298,21 @@ function _M.delete(key)
     
     redis_conn.close_connection(red)
     
+    -- 从recent_keys列表中移除该键
+    local recent_keys = cache_stats:get("recent_keys") or "{}"
+    local keys = cjson.decode(recent_keys)
+    local new_keys = {}
+    
+    -- 过滤掉要删除的键
+    for _, item in ipairs(keys) do
+        if item.key ~= key then
+            table.insert(new_keys, item)
+        end
+    end
+    
+    -- 更新recent_keys列表
+    cache_stats:set("recent_keys", cjson.encode(new_keys))
+    
     return true
 end
 
@@ -339,15 +354,8 @@ function _M.delete_by_prefix(prefix)
     
     redis_conn.close_connection(red)
     
-    -- 尝试清除内存缓存中的相关键
-    -- 注意：shared dict没有前缀匹配功能，这里是一个简单实现
-    local memory_keys = cache_metadata:get_keys(0)
-    for _, key in ipairs(memory_keys) do
-        if key:sub(1, #prefix) == prefix then
-            cache_metadata:delete(key)
-            count = count + 1
-        end
-    end
+    -- 直接重置recent_keys为空数组，而不是尝试过滤
+    cache_stats:set("recent_keys", "[]")
     
     return true, count
 end

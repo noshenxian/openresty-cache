@@ -39,4 +39,29 @@ function _M.close_connection(red)
     end
 end
 
+-- 添加Redis连接状态检查函数
+function _M.check_connection()
+    local red = redis:new()
+    red:set_timeout(REDIS_CONFIG.timeout)
+    
+    local ok, err = red:connect(REDIS_CONFIG.host, REDIS_CONFIG.port)
+    if not ok then
+        ngx.log(ngx.ERR, "Failed to connect to Redis: ", err)
+        return false, err
+    end
+    
+    -- 尝试执行一个简单的PING命令
+    local res, err = red:ping()
+    if not res then
+        ngx.log(ngx.ERR, "Failed to ping Redis: ", err)
+        red:close()
+        return false, err
+    end
+    
+    -- 关闭连接
+    _M.close_connection(red)
+    
+    return true
+end
+
 return _M

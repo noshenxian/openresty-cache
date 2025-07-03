@@ -96,6 +96,19 @@ local routes = {
             local miss_urls = cache_lib.get_miss_urls()
             return { urls = miss_urls }
         end
+    },  -- 在这里添加逗号
+    -- 在路由表中添加
+    ["/api/cache/status"] = {
+        GET = function()
+            local redis_conn = require "redis_conn"
+            local redis_ok, redis_err = redis_conn.check_connection()
+            
+            return {
+                redis_connected = redis_ok,
+                redis_error = redis_err,
+                server_time = ngx.time()
+            }
+        end
     }
 }
 
