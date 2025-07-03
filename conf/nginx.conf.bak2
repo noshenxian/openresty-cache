@@ -1,0 +1,76 @@
+worker_processes auto;
+error_log logs/error.log info;
+events {
+    worker_connections 1024;
+}
+
+http {
+    # 基本设置
+    include mime.types;
+    default_type application/octet-stream;
+    sendfile on;
+    keepalive_timeout 65;
+    client_max_body_size 100m;
+    
+    # Lua模块路径
+    lua_package_path "$prefix/lua/?.lua;$prefix/lua/lib/?.lua;;";
+    lua_code_cache on;
+    
+    # 共享内存区域
+    lua_shared_dict cache_metadata 10m;  # 存储缓存元数据
+    lua_shared_dict cache_locks 1m;      # 用于分布式锁
+    lua_shared_dict cache_stats 5m;      # 缓存统计信息
+    
+    # Redis连接池
+    init_by_lua_block {
+        require "resty.core"
+        local redis_config = {
+            host = "127.0.0.1",
+            port = 6379,
+            timeout = 1000,  -- 毫秒
+            pool_size = 100,
+            idle_timeout = 10000  -- 毫秒
+        }
+        -- 全局共享Redis配置
+        _G.REDIS_CONFIG = redis_config
+    }
+    
+    # 缓存服务器
+    server {
+        listen 8080;
+        server_name localhost;
+        
+        # 缓存处理入口
+        location / {
+            # 访问控制和缓存策略
+            access_by_lua_file lua/cache/access.lua;
+            
+            # 内容处理
+            content_by_lua_file lua/cache/handler.lua;
+            
+            # 响应头处理
+            header_filter_by_lua_file lua/cache/header_filter.lua;
+            
+            # 日志记录
+            log_by_lua_file lua/cache/log.lua;
+        }
+        
+        # 缓存API
+        location /api/ {
+            content_by_lua_file lua/api/router.lua;
+        }
+        
+        # 缓存管理后台
+        location /dashboard/ {
+            alias /Users/sean/Desktop/openresty-cache/dashboard/;
+            index index.html;
+            try_files $uri $uri/ /dashboard/index.html;
+        }
+        
+        # 静态资源
+        location /static/ {
+            alias /Users/sean/Desktop/openresty-cache/static/;
+            expires 7d;
+        }
+    }
+}
