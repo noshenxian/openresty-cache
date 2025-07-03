@@ -392,3 +392,1124 @@ coroutine 0:
 	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:79: in function 'handler'
 	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:119: in main chunk, client: 127.0.0.1, server: localhost, request: "POST /api/cache/flush HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
 2025/07/03 20:05:21 [info] 33012#14365914: *29 [lua] log.lua:21: {"uri":"\/favicon.ico","status":200,"args":{},"cache_key":"35a63c8a85b1279a0f991ce8828fb9d9","cache_hit":false,"time":1751544321} while logging request, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 3 (SIGQUIT) received from 36374, shutting down
+2025/07/03 20:11:11 [notice] 33005#14365906: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received from 33005
+2025/07/03 20:11:11 [notice] 33005#14365906: exiting
+2025/07/03 20:11:11 [notice] 33011#14365912: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33010#14365911: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33007#14365908: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33011#14365912: exiting
+2025/07/03 20:11:11 [notice] 33014#14365916: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received from 33014
+2025/07/03 20:11:11 [notice] 33006#14365907: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33014#14365916: exiting
+2025/07/03 20:11:11 [notice] 33007#14365908: exiting
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received from 33008
+2025/07/03 20:11:11 [notice] 33012#14365914: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33015#14365917: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33008#14365909: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33013#14365915: gracefully shutting down
+2025/07/03 20:11:11 [notice] 33006#14365907: exiting
+2025/07/03 20:11:11 [notice] 33008#14365909: exiting
+2025/07/03 20:11:11 [notice] 33015#14365917: exiting
+2025/07/03 20:11:11 [notice] 33012#14365914: exiting
+2025/07/03 20:11:11 [notice] 33013#14365915: exiting
+2025/07/03 20:11:11 [notice] 33008#14365909: exit
+2025/07/03 20:11:11 [notice] 33007#14365908: exit
+2025/07/03 20:11:11 [notice] 33012#14365914: exit
+2025/07/03 20:11:11 [notice] 33006#14365907: exit
+2025/07/03 20:11:11 [notice] 33011#14365912: exit
+2025/07/03 20:11:11 [notice] 33014#14365916: exit
+2025/07/03 20:11:11 [notice] 33015#14365917: exit
+2025/07/03 20:11:11 [notice] 33013#14365915: exit
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33008
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33008 exited with code 0
+2025/07/03 20:11:11 [notice] 33010#14365911: exiting
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33007 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33007
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33005#14365906: exit
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33012
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33012 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33010#14365911: exit
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33006
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33006 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33011
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33011 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33014
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33014 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33015
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33015 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33013
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33013 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33005
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33005 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received from 33010
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received from 33010
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 23 (SIGIO) received from 33010
+2025/07/03 20:11:11 [notice] 33004#14365905: signal 20 (SIGCHLD) received from 33010
+2025/07/03 20:11:11 [notice] 33004#14365905: worker process 33010 exited with code 0
+2025/07/03 20:11:11 [notice] 33004#14365905: exit
+2025/07/03 20:11:13 [notice] 36402#14378900: using the "kqueue" event method
+2025/07/03 20:11:13 [notice] 36402#14378900: openresty/1.27.1.2
+2025/07/03 20:11:13 [notice] 36402#14378900: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:11:13 [notice] 36402#14378900: OS: Darwin 24.5.0
+2025/07/03 20:11:13 [notice] 36402#14378900: hw.ncpu: 10
+2025/07/03 20:11:13 [notice] 36402#14378900: net.inet.tcp.sendspace: 131072
+2025/07/03 20:11:13 [notice] 36402#14378900: kern.ipc.somaxconn: 128
+2025/07/03 20:11:13 [notice] 36402#14378900: hw.cachelinesize: 128
+2025/07/03 20:11:13 [notice] 36402#14378900: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker processes
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36404
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36405
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36406
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36408
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36409
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36410
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36411
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36412
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36413
+2025/07/03 20:11:13 [notice] 36403#14378902: start worker process 36414
+2025/07/03 20:11:13 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:11:13 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:11:21 [error] 36409#14378908: *2 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:21 [error] 36411#14378911: *1 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:21 [error] 36411#14378911: *3 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/status HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:21 [error] 36413#14378913: *5 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:21 [error] 36412#14378912: *4 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:21 [info] 36412#14378912: *6 [lua] log.lua:21: {"cache_key":"35a63c8a85b1279a0f991ce8828fb9d9","uri":"\/favicon.ico","status":200,"time":1751544681,"cache_hit":false,"args":{}} while logging request, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:25 [error] 36412#14378912: *6 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:25 [error] 36412#14378912: *8 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/status HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:25 [error] 36412#14378912: *10 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:25 [error] 36413#14378913: *9 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:25 [info] 36412#14378912: *11 [lua] log.lua:21: {"cache_key":"35a63c8a85b1279a0f991ce8828fb9d9","uri":"\/favicon.ico","status":200,"time":1751544685,"cache_hit":false,"args":{}} while logging request, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:26 [error] 36412#14378912: *11 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:26 [error] 36413#14378913: *12 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/miss_urls HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:29 [error] 36410#14378910: *13 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/miss_urls HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:29 [error] 36414#14378914: *14 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:11:55 [error] 36409#14378908: *15 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:12:25 [error] 36408#14378907: *16 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:12:55 [error] 36414#14378914: *17 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:13:25 [error] 36413#14378913: *18 failed to load external Lua file "/Users/sean/Desktop/openresty-cache/lua/api/router.lua": /Users/sean/Desktop/openresty-cache/lua/api/router.lua:113: '}' expected (to close '{' at line 11) near '[', client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 3 (SIGQUIT) received from 37778, shutting down
+2025/07/03 20:14:19 [notice] 36405#14378904: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36404#14378903: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36408#14378907: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received from 36408
+2025/07/03 20:14:19 [notice] 36406#14378905: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36408#14378907: exiting
+2025/07/03 20:14:19 [notice] 36409#14378908: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36410#14378910: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36406#14378905: exiting
+2025/07/03 20:14:19 [notice] 36404#14378903: exiting
+2025/07/03 20:14:19 [notice] 36410#14378910: exiting
+2025/07/03 20:14:19 [notice] 36411#14378911: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36414#14378914: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36409#14378908: exiting
+2025/07/03 20:14:19 [notice] 36413#14378913: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36414#14378914: exiting
+2025/07/03 20:14:19 [notice] 36411#14378911: exiting
+2025/07/03 20:14:19 [notice] 36413#14378913: exiting
+2025/07/03 20:14:19 [notice] 36408#14378907: exit
+2025/07/03 20:14:19 [notice] 36410#14378910: exit
+2025/07/03 20:14:19 [notice] 36404#14378903: exit
+2025/07/03 20:14:19 [notice] 36405#14378904: exiting
+2025/07/03 20:14:19 [notice] 36409#14378908: exit
+2025/07/03 20:14:19 [notice] 36414#14378914: exit
+2025/07/03 20:14:19 [notice] 36413#14378913: exit
+2025/07/03 20:14:19 [notice] 36411#14378911: exit
+2025/07/03 20:14:19 [notice] 36412#14378912: gracefully shutting down
+2025/07/03 20:14:19 [notice] 36405#14378904: exit
+2025/07/03 20:14:19 [notice] 36412#14378912: exiting
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received from 36414
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36408
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36408 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36406#14378905: exit
+2025/07/03 20:14:19 [notice] 36412#14378912: exit
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36404
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36410 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36404 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36405
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36405 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36411
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36411 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36414
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36414 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36413
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36413 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36406
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36406 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36412
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36412 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received from 36409
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received from 36409
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 23 (SIGIO) received
+2025/07/03 20:14:19 [notice] 36403#14378902: signal 20 (SIGCHLD) received from 36409
+2025/07/03 20:14:19 [notice] 36403#14378902: worker process 36409 exited with code 0
+2025/07/03 20:14:19 [notice] 36403#14378902: exit
+2025/07/03 20:14:21 [notice] 37806#14384744: using the "kqueue" event method
+2025/07/03 20:14:21 [notice] 37806#14384744: openresty/1.27.1.2
+2025/07/03 20:14:21 [notice] 37806#14384744: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:14:21 [notice] 37806#14384744: OS: Darwin 24.5.0
+2025/07/03 20:14:21 [notice] 37806#14384744: hw.ncpu: 10
+2025/07/03 20:14:21 [notice] 37806#14384744: net.inet.tcp.sendspace: 131072
+2025/07/03 20:14:21 [notice] 37806#14384744: kern.ipc.somaxconn: 128
+2025/07/03 20:14:21 [notice] 37806#14384744: hw.cachelinesize: 128
+2025/07/03 20:14:21 [notice] 37806#14384744: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker processes
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37808
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37809
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37810
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37811
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37813
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37814
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37815
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37816
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37817
+2025/07/03 20:14:21 [notice] 37807#14384748: start worker process 37818
+2025/07/03 20:14:21 [notice] 37807#14384748: signal 23 (SIGIO) received from 37810
+2025/07/03 20:14:21 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:14:29 [info] 37818#14384760: *3 [lua] log.lua:21: {"uri":"\/favicon.ico","cache_key":"35a63c8a85b1279a0f991ce8828fb9d9","status":200,"args":{},"cache_hit":false,"time":1751544869} while logging request, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:14:34 [info] 37817#14384759: *5 [lua] log.lua:21: {"uri":"\/kp\/zs\/pc\/list.html","cache_key":"095d25ac1698d910de7b0632126deca4","time":1751544874,"status":200,"args":{},"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:14:35 [info] 37817#14384759: *5 [lua] log.lua:21: {"uri":"\/kp\/c100630\/kaiwu.shtml","cache_key":"00f12cdf0d55648b20adb612be91962c","time":1751544875,"status":200,"args":{},"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100630/kaiwu.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:14:36 [info] 37817#14384759: *5 [lua] log.lua:21: {"uri":"\/kp\/c100371\/alzx.shtml","cache_key":"e3acfd07b93727f183fc971f895a42b4","time":1751544876,"status":200,"args":{},"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100371/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100630/kaiwu.shtml"
+2025/07/03 20:14:36 [info] 37817#14384759: *5 [lua] log.lua:21: {"uri":"\/kp\/c100379\/alzx.shtml","cache_key":"19665c6313983dbb9f58371a8bd23d3e","time":1751544876,"status":200,"args":{},"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100379/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100371/alzx.shtml"
+2025/07/03 20:14:38 [info] 37817#14384759: *8 [lua] log.lua:21: {"uri":"\/kp\/xwdt\/xwzxxym.shtml","cache_key":"02c10bb1fb2a0edba7668219215d25e9","time":1751544878,"status":200,"args":{},"cache_hit":false} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/xwdt/xwzxxym.shtml HTTP/1.1", upstream: "https://198.18.19.207:443/kp/xwdt/xwzxxym.shtml", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:14:39 [info] 37817#14384759: *8 [lua] log.lua:21: {"uri":"\/kp\/c100098\/gywm.shtml","cache_key":"99bbc222a4a901184ab4720d89edbbdf","time":1751544879,"status":200,"args":{},"cache_hit":false} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", upstream: "https://198.18.19.207:443/kp/c100098/gywm.shtml", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/xwdt/xwzxxym.shtml"
+2025/07/03 20:14:39 [info] 37817#14384759: *8 [lua] log.lua:21: {"uri":"\/getManuscriptById","cache_key":"19d8b3f2ab893362ad0bfcc9f2d49200","time":1751544879,"status":304,"args":{"id":"1650017640317456384"},"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017640317456384 HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:14:40 [info] 37817#14384759: *8 [lua] log.lua:21: {"uri":"\/kp\/zs\/pc\/list.html","cache_key":"095d25ac1698d910de7b0632126deca4","time":1751544880,"status":200,"args":{},"cache_level":1,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 3 (SIGQUIT) received from 39428, shutting down
+2025/07/03 20:18:22 [notice] 37809#14384750: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37811#14384752: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37810#14384751: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37808#14384749: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37818#14384760: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37816#14384758: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37811#14384752: exiting
+2025/07/03 20:18:22 [notice] 37808#14384749: exiting
+2025/07/03 20:18:22 [notice] 37809#14384750: exiting
+2025/07/03 20:18:22 [notice] 37813#14384754: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37817#14384759: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37810#14384751: exiting
+2025/07/03 20:18:22 [notice] 37816#14384758: exiting
+2025/07/03 20:18:22 [notice] 37818#14384760: exiting
+2025/07/03 20:18:22 [notice] 37817#14384759: exiting
+2025/07/03 20:18:22 [notice] 37813#14384754: exiting
+2025/07/03 20:18:22 [notice] 37810#14384751: exit
+2025/07/03 20:18:22 [notice] 37808#14384749: exit
+2025/07/03 20:18:22 [notice] 37814#14384755: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37811#14384752: exit
+2025/07/03 20:18:22 [notice] 37814#14384755: exiting
+2025/07/03 20:18:22 [notice] 37816#14384758: exit
+2025/07/03 20:18:22 [notice] 37817#14384759: exit
+2025/07/03 20:18:22 [notice] 37818#14384760: exit
+2025/07/03 20:18:22 [notice] 37815#14384757: gracefully shutting down
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37815#14384757: exiting
+2025/07/03 20:18:22 [notice] 37809#14384750: exit
+2025/07/03 20:18:22 [notice] 37813#14384754: exit
+2025/07/03 20:18:22 [notice] 37814#14384755: exit
+2025/07/03 20:18:22 [notice] 37815#14384757: exit
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37810
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37810 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37808 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37817
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37817 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37811
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37818 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37814 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37811 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37815
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37815 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37809
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37809 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37816
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37816 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received from 37813
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received from 37813
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received from 37813
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 23 (SIGIO) received
+2025/07/03 20:18:22 [notice] 37807#14384748: signal 20 (SIGCHLD) received from 37813
+2025/07/03 20:18:22 [notice] 37807#14384748: worker process 37813 exited with code 0
+2025/07/03 20:18:22 [notice] 37807#14384748: exit
+2025/07/03 20:18:24 [notice] 39453#14391775: using the "kqueue" event method
+2025/07/03 20:18:24 [notice] 39453#14391775: openresty/1.27.1.2
+2025/07/03 20:18:24 [notice] 39453#14391775: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:18:24 [notice] 39453#14391775: OS: Darwin 24.5.0
+2025/07/03 20:18:24 [notice] 39453#14391775: hw.ncpu: 10
+2025/07/03 20:18:24 [notice] 39453#14391775: net.inet.tcp.sendspace: 131072
+2025/07/03 20:18:24 [notice] 39453#14391775: kern.ipc.somaxconn: 128
+2025/07/03 20:18:24 [notice] 39453#14391775: hw.cachelinesize: 128
+2025/07/03 20:18:24 [notice] 39453#14391775: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker processes
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39458
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39459
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39460
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39461
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39462
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39464
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39465
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39466
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39467
+2025/07/03 20:18:24 [notice] 39457#14391783: start worker process 39468
+2025/07/03 20:18:24 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:18:24 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:18:53 [info] 39466#14391793: *1 [lua] log.lua:21: {"cache_key":"35a63c8a85b1279a0f991ce8828fb9d9","args":{},"time":1751545133,"cache_hit":false,"status":200,"uri":"\/favicon.ico"} while logging request, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:18:57 [info] 39467#14391794: *6 [lua] log.lua:21: {"status":200,"time":1751545137,"cache_level":2,"args":{},"uri":"\/kp\/zs\/pc\/list.html","cache_hit":true,"cache_key":"095d25ac1698d910de7b0632126deca4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:18:58 [info] 39467#14391794: *6 [lua] log.lua:21: {"status":200,"time":1751545138,"cache_level":2,"args":{},"uri":"\/kp\/c100630\/kaiwu.shtml","cache_hit":true,"cache_key":"00f12cdf0d55648b20adb612be91962c"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100630/kaiwu.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:18:59 [info] 39467#14391794: *6 [lua] log.lua:21: {"status":200,"time":1751545139,"cache_level":2,"args":{},"uri":"\/kp\/c100371\/alzx.shtml","cache_hit":true,"cache_key":"e3acfd07b93727f183fc971f895a42b4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100371/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100630/kaiwu.shtml"
+2025/07/03 20:18:59 [info] 39467#14391794: *6 [lua] log.lua:21: {"status":200,"time":1751545139,"cache_level":2,"args":{},"uri":"\/kp\/c100379\/alzx.shtml","cache_hit":true,"cache_key":"19665c6313983dbb9f58371a8bd23d3e"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100379/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100371/alzx.shtml"
+2025/07/03 20:19:00 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"02c10bb1fb2a0edba7668219215d25e9","args":{},"time":1751545140,"cache_hit":true,"status":200,"uri":"\/kp\/xwdt\/xwzxxym.shtml","cache_level":2} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/xwdt/xwzxxym.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:19:00 [info] 39467#14391794: *6 kevent() reported that client prematurely closed connection, so upstream connection is closed too while reading response header from upstream, client: 172.16.100.244, server: cache.example.com, request: "POST /queryList HTTP/1.1", upstream: "https://198.18.19.207:443/queryList", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:19:00 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"196fe93d60b56004c3620f54710e3454","args":{},"time":1751545140,"cache_hit":true,"status":200,"uri":"\/kp\/c100096\/tzzgx2022.html","cache_level":2} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100096/tzzgx2022.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/xwdt/xwzxxym.shtml"
+2025/07/03 20:19:01 [info] 39466#14391793: *12 [lua] log.lua:21: {"cache_key":"fb17d6e5a4d50e0e2e59d92c804e6b9f","args":{},"time":1751545141,"cache_hit":false,"status":200,"uri":"\/noticejson\/tempnotice.json"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/tempnotice.json HTTP/1.1", upstream: "https://198.18.19.207:443/noticejson/tempnotice.json", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:01 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":200,"time":1751545141,"cache_hit":false,"uri":"\/noticejson\/notice.json","args":{},"cache_key":"5f61383e2532c96ccb9d7e8465398dd0"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/notice.json HTTP/1.1", upstream: "https://198.18.19.207:443/noticejson/notice.json", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:01 [info] 39467#14391794: *13 [lua] log.lua:21: {"status":304,"time":1751545141,"args":{"id":"1650017651314921472"},"uri":"\/getManuscriptById","cache_hit":false,"cache_key":"171ef6a56eeb564437c01b4411bffc67"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651314921472 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651314921472", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:01 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"32063fabc44f0e25433e9444158bf4e4","args":{"id":"1650017651390418944"},"time":1751545141,"cache_hit":false,"status":304,"uri":"\/getManuscriptById"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651390418944 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651390418944", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:01 [info] 39467#14391794: *11 [lua] log.lua:21: {"status":304,"time":1751545141,"args":{"id":"1650017651411390464"},"uri":"\/getManuscriptById","cache_hit":false,"cache_key":"8bbf009c5ee1de214cb2ed4f177a2a93"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651411390464 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651411390464", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:01 [info] 39467#14391794: *11 [lua] log.lua:21: {"status":200,"time":1751545141,"cache_level":1,"args":{},"uri":"\/kp\/c100096\/tzzgx2022.html","cache_hit":true,"cache_key":"196fe93d60b56004c3620f54710e3454"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100096/tzzgx2022.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:02 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"32063fabc44f0e25433e9444158bf4e4","args":{"id":"1650017651390418944"},"time":1751545142,"cache_hit":false,"status":304,"uri":"\/getManuscriptById"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651390418944 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651390418944", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:02 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":304,"time":1751545142,"cache_hit":false,"uri":"\/getManuscriptById","args":{"id":"1650017651314921472"},"cache_key":"171ef6a56eeb564437c01b4411bffc67"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651314921472 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651314921472", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:02 [info] 39467#14391794: *11 [lua] log.lua:21: {"status":304,"time":1751545142,"args":{"id":"1650017651411390464"},"uri":"\/getManuscriptById","cache_hit":false,"cache_key":"8bbf009c5ee1de214cb2ed4f177a2a93"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651411390464 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651411390464", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:02 [info] 39467#14391794: *11 [lua] log.lua:21: {"status":200,"time":1751545142,"cache_level":1,"args":{},"uri":"\/kp\/xwdt\/xwzxxym.shtml","cache_hit":true,"cache_key":"02c10bb1fb2a0edba7668219215d25e9"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/xwdt/xwzxxym.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:03 [info] 39467#14391794: *11 [lua] log.lua:21: {"status":200,"time":1751545143,"cache_level":1,"args":{},"uri":"\/kp\/c100371\/alzx.shtml","cache_hit":true,"cache_key":"e3acfd07b93727f183fc971f895a42b4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100371/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/xwdt/xwzxxym.shtml"
+2025/07/03 20:19:03 [info] 39467#14391794: *11 [lua] log.lua:21: {"status":200,"time":1751545143,"cache_level":1,"args":{},"uri":"\/kp\/c100379\/alzx.shtml","cache_hit":true,"cache_key":"19665c6313983dbb9f58371a8bd23d3e"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100379/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100371/alzx.shtml"
+2025/07/03 20:19:03 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":200,"time":1751545143,"cache_level":1,"cache_hit":true,"uri":"\/kp\/c100630\/kaiwu.shtml","args":{},"cache_key":"00f12cdf0d55648b20adb612be91962c"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100630/kaiwu.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:19:03 [info] 39467#14391794: *11 kevent() reported that client prematurely closed connection, so upstream connection is closed too while reading response header from upstream, client: 172.16.100.244, server: cache.example.com, request: "POST /queryList HTTP/1.1", upstream: "https://198.18.19.207:443/queryList", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:19:04 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":200,"time":1751545144,"cache_level":1,"cache_hit":true,"uri":"\/kp\/zs\/pc\/list.html","args":{},"cache_key":"095d25ac1698d910de7b0632126deca4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100630/kaiwu.shtml"
+2025/07/03 20:19:52 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":200,"time":1751545192,"cache_level":1,"cache_hit":true,"uri":"\/kp\/c100630\/kaiwu.shtml","args":{},"cache_key":"00f12cdf0d55648b20adb612be91962c"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100630/kaiwu.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:19:53 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":200,"time":1751545193,"cache_level":1,"cache_hit":true,"uri":"\/kp\/c100371\/alzx.shtml","args":{},"cache_key":"e3acfd07b93727f183fc971f895a42b4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100371/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100630/kaiwu.shtml"
+2025/07/03 20:19:53 [info] 39468#14391795: *10 [lua] log.lua:21: {"status":200,"time":1751545193,"cache_level":1,"cache_hit":true,"uri":"\/kp\/c100379\/alzx.shtml","args":{},"cache_key":"19665c6313983dbb9f58371a8bd23d3e"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100379/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100371/alzx.shtml"
+2025/07/03 20:19:54 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"02c10bb1fb2a0edba7668219215d25e9","args":{},"time":1751545194,"cache_hit":true,"status":200,"uri":"\/kp\/xwdt\/xwzxxym.shtml","cache_level":1} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/xwdt/xwzxxym.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:19:54 [info] 39468#14391795: *10 kevent() reported that client prematurely closed connection, so upstream connection is closed too while reading response header from upstream, client: 172.16.100.244, server: cache.example.com, request: "POST /queryList HTTP/1.1", upstream: "https://198.18.19.207:443/queryList", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:19:54 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"196fe93d60b56004c3620f54710e3454","args":{},"time":1751545194,"cache_hit":true,"status":200,"uri":"\/kp\/c100096\/tzzgx2022.html","cache_level":1} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100096/tzzgx2022.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/xwdt/xwzxxym.shtml"
+2025/07/03 20:19:54 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"5f61383e2532c96ccb9d7e8465398dd0","args":{},"time":1751545194,"cache_hit":true,"status":304,"uri":"\/noticejson\/notice.json","cache_level":1} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/notice.json HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:54 [info] 39467#14391794: *13 [lua] log.lua:21: {"status":304,"time":1751545194,"cache_level":1,"args":{},"uri":"\/noticejson\/tempnotice.json","cache_hit":true,"cache_key":"fb17d6e5a4d50e0e2e59d92c804e6b9f"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/tempnotice.json HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:55 [info] 39466#14391793: *12 [lua] log.lua:21: {"cache_key":"32063fabc44f0e25433e9444158bf4e4","args":{"id":"1650017651390418944"},"time":1751545195,"cache_hit":false,"status":304,"uri":"\/getManuscriptById"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651390418944 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651390418944", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:55 [info] 39466#14391793: *9 [lua] log.lua:21: {"cache_key":"8bbf009c5ee1de214cb2ed4f177a2a93","args":{"id":"1650017651411390464"},"time":1751545195,"cache_hit":false,"status":304,"uri":"\/getManuscriptById"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651411390464 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651411390464", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:55 [info] 39467#14391794: *13 [lua] log.lua:21: {"status":304,"time":1751545195,"args":{"id":"1650017651314921472"},"uri":"\/getManuscriptById","cache_hit":false,"cache_key":"171ef6a56eeb564437c01b4411bffc67"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651314921472 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651314921472", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:55 [info] 39467#14391794: *13 [lua] log.lua:21: {"status":200,"time":1751545195,"cache_level":2,"args":{},"uri":"\/kp\/c100098\/gywm.shtml","cache_hit":true,"cache_key":"99bbc222a4a901184ab4720d89edbbdf"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:19:55 [info] 39467#14391794: *13 [lua] log.lua:21: {"status":304,"time":1751545195,"cache_level":2,"args":{"id":"1650017640317456384"},"uri":"\/getManuscriptById","cache_hit":true,"cache_key":"19d8b3f2ab893362ad0bfcc9f2d49200"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017640317456384 HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:19:57 [info] 39467#14391794: *13 [lua] log.lua:21: {"status":200,"time":1751545197,"args":{},"uri":"\/kp\/zs\/pc\/list.html","cache_hit":false,"cache_key":"095d25ac1698d910de7b0632126deca4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", upstream: "https://198.18.19.207:443/kp/zs/pc/list.html", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 3 (SIGQUIT) received from 42026, shutting down
+2025/07/03 20:25:02 [notice] 39458#14391784: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39467#14391794: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39459#14391785: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39462#14391788: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39460#14391786: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39466#14391793: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39461#14391787: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39458#14391784: exiting
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39462#14391788: exiting
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39468#14391795: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39466#14391793: exiting
+2025/07/03 20:25:02 [notice] 39460#14391786: exiting
+2025/07/03 20:25:02 [notice] 39467#14391794: exiting
+2025/07/03 20:25:02 [notice] 39459#14391785: exiting
+2025/07/03 20:25:02 [notice] 39461#14391787: exiting
+2025/07/03 20:25:02 [notice] 39468#14391795: exiting
+2025/07/03 20:25:02 [notice] 39458#14391784: exit
+2025/07/03 20:25:02 [notice] 39462#14391788: exit
+2025/07/03 20:25:02 [notice] 39460#14391786: exit
+2025/07/03 20:25:02 [notice] 39465#14391791: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39465#14391791: exiting
+2025/07/03 20:25:02 [notice] 39464#14391790: gracefully shutting down
+2025/07/03 20:25:02 [notice] 39459#14391785: exit
+2025/07/03 20:25:02 [notice] 39464#14391790: exiting
+2025/07/03 20:25:02 [notice] 39468#14391795: exit
+2025/07/03 20:25:02 [notice] 39466#14391793: exit
+2025/07/03 20:25:02 [notice] 39465#14391791: exit
+2025/07/03 20:25:02 [notice] 39461#14391787: exit
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39458
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39458 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39462 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39460 exited with code 0
+2025/07/03 20:25:02 [notice] 39467#14391794: exit
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39464#14391790: exit
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39460
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39465
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39465 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39461
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39461 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39466
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39466 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39464
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39464 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39459
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39459 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39467
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39467 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received from 39468
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received from 39468
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 23 (SIGIO) received
+2025/07/03 20:25:02 [notice] 39457#14391783: signal 20 (SIGCHLD) received from 39468
+2025/07/03 20:25:02 [notice] 39457#14391783: worker process 39468 exited with code 0
+2025/07/03 20:25:02 [notice] 39457#14391783: exit
+2025/07/03 20:25:04 [notice] 42054#14402899: using the "kqueue" event method
+2025/07/03 20:25:04 [notice] 42054#14402899: openresty/1.27.1.2
+2025/07/03 20:25:04 [notice] 42054#14402899: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:25:04 [notice] 42054#14402899: OS: Darwin 24.5.0
+2025/07/03 20:25:04 [notice] 42054#14402899: hw.ncpu: 10
+2025/07/03 20:25:04 [notice] 42054#14402899: net.inet.tcp.sendspace: 131072
+2025/07/03 20:25:04 [notice] 42054#14402899: kern.ipc.somaxconn: 128
+2025/07/03 20:25:04 [notice] 42054#14402899: hw.cachelinesize: 128
+2025/07/03 20:25:04 [notice] 42054#14402899: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker processes
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42056
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42057
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42058
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42059
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42060
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42061
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42063
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42064
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42065
+2025/07/03 20:25:04 [notice] 42055#14402902: start worker process 42066
+2025/07/03 20:25:04 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:25:14 [error] 42064#14402911: *1 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:15 [error] 42064#14402911: *2 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:16 [error] 42057#14402904: *3 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:95: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/miss_urls HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:16 [error] 42061#14402908: *4 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:18 [error] 42064#14402911: *5 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:18 [error] 42061#14402908: *6 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:21 [error] 42063#14402910: *7 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:21 [error] 42064#14402911: *10 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:21 [error] 42065#14402913: *8 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:21 [error] 42066#14402914: *11 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/cache/access.lua:1: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:21 [error] 42066#14402914: *11 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:23 [error] 42066#14402914: *12 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:24 [error] 42066#14402914: *13 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:95: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/miss_urls HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:26 [error] 42064#14402911: *14 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:95: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/miss_urls HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:27 [error] 42063#14402910: *15 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:30 [error] 42065#14402913: *16 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:30 [error] 42065#14402913: *16 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:31 [error] 42057#14402904: *17 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:31 [error] 42057#14402904: *17 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:35 [error] 42061#14402908: *18 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:35 [error] 42064#14402911: *22 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:35 [error] 42066#14402914: *19 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:35 [error] 42063#14402910: *21 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/cache/access.lua:1: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:35 [error] 42063#14402910: *21 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:25:38 [error] 42066#14402914: *23 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:38 [error] 42066#14402914: *23 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:38 [error] 42063#14402910: *24 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:38 [error] 42063#14402910: *24 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:39 [error] 42065#14402913: *25 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:39 [error] 42065#14402913: *25 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:39 [error] 42065#14402913: *26 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:39 [error] 42065#14402913: *26 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:44 [error] 42061#14402908: *27 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:25:44 [error] 42061#14402908: *27 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:26:06 [error] 42059#14402906: *28 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:26:14 [error] 42065#14402913: *29 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:26:14 [error] 42065#14402913: *29 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:26:22 [error] 42063#14402910: *30 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:26:22 [error] 42063#14402910: *30 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:26:22 [error] 42064#14402911: *31 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:26:22 [error] 42064#14402911: *31 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104c5818c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:26:36 [error] 42059#14402906: *32 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:27:06 [error] 42059#14402906: *33 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:576: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:165: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:27:14 [info] 42063#14402910: *34 [lua] log.lua:21: {"time":1751545634,"cache_hit":true,"uri":"\/kp\/zs\/pc\/list.html","status":200,"cache_level":2,"args":{},"cache_key":"095d25ac1698d910de7b0632126deca4"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 3 (SIGQUIT) received from 42976, shutting down
+2025/07/03 20:27:15 [notice] 42056#14402903: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42058#14402905: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42064#14402911: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42063#14402910: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42057#14402904: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42056#14402903: exiting
+2025/07/03 20:27:15 [notice] 42057#14402904: exiting
+2025/07/03 20:27:15 [notice] 42065#14402913: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42064#14402911: exiting
+2025/07/03 20:27:15 [notice] 42063#14402910: exiting
+2025/07/03 20:27:15 [notice] 42061#14402908: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42066#14402914: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42065#14402913: exiting
+2025/07/03 20:27:15 [notice] 42066#14402914: exiting
+2025/07/03 20:27:15 [notice] 42061#14402908: exiting
+2025/07/03 20:27:15 [notice] 42058#14402905: exiting
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42060#14402907: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42060#14402907: exiting
+2025/07/03 20:27:15 [notice] 42057#14402904: exit
+2025/07/03 20:27:15 [notice] 42063#14402910: exit
+2025/07/03 20:27:15 [notice] 42065#14402913: exit
+2025/07/03 20:27:15 [notice] 42064#14402911: exit
+2025/07/03 20:27:15 [notice] 42060#14402907: exit
+2025/07/03 20:27:15 [notice] 42066#14402914: exit
+2025/07/03 20:27:15 [notice] 42061#14402908: exit
+2025/07/03 20:27:15 [notice] 42056#14402903: exit
+2025/07/03 20:27:15 [notice] 42059#14402906: gracefully shutting down
+2025/07/03 20:27:15 [notice] 42058#14402905: exit
+2025/07/03 20:27:15 [notice] 42059#14402906: exiting
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42064
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42065 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42064 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42063 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42060 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42059#14402906: exit
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42057
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42057 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42061
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42061 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42066
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42066 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42058
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42058 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42056 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42056
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received from 42059
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 23 (SIGIO) received from 42059
+2025/07/03 20:27:15 [notice] 42055#14402902: signal 20 (SIGCHLD) received from 42059
+2025/07/03 20:27:15 [notice] 42055#14402902: worker process 42059 exited with code 0
+2025/07/03 20:27:15 [notice] 42055#14402902: exit
+2025/07/03 20:27:17 [notice] 43005#14406927: using the "kqueue" event method
+2025/07/03 20:27:17 [notice] 43005#14406927: openresty/1.27.1.2
+2025/07/03 20:27:17 [notice] 43005#14406927: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:27:17 [notice] 43005#14406927: OS: Darwin 24.5.0
+2025/07/03 20:27:17 [notice] 43005#14406927: hw.ncpu: 10
+2025/07/03 20:27:17 [notice] 43005#14406927: net.inet.tcp.sendspace: 131072
+2025/07/03 20:27:17 [notice] 43005#14406927: kern.ipc.somaxconn: 128
+2025/07/03 20:27:17 [notice] 43005#14406927: hw.cachelinesize: 128
+2025/07/03 20:27:17 [notice] 43005#14406927: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker processes
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43007
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43008
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43009
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43010
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43011
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43013
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43014
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43015
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43016
+2025/07/03 20:27:17 [notice] 43006#14406931: start worker process 43017
+2025/07/03 20:27:17 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:27:17 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:27:17 [notice] 43006#14406931: signal 23 (SIGIO) received from 43008
+2025/07/03 20:27:17 [notice] 43006#14406931: signal 23 (SIGIO) received from 43013
+2025/07/03 20:27:17 [notice] 43006#14406931: signal 23 (SIGIO) received from 43016
+2025/07/03 20:27:26 [info] 43013#14406939: *2 [lua] log.lua:21: {"uri":"\/favicon.ico","cache_key":"35a63c8a85b1279a0f991ce8828fb9d9","time":1751545646,"args":{},"status":200,"cache_hit":false} while logging request, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:27:31 [info] 43015#14406942: *5 [lua] log.lua:21: {"args":{},"uri":"\/kp\/zs\/pc\/list.html","cache_key":"095d25ac1698d910de7b0632126deca4","time":1751545651,"status":200,"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:27:31 [info] 43015#14406942: *5 [lua] log.lua:21: {"args":{},"uri":"\/kp\/c100630\/kaiwu.shtml","cache_key":"00f12cdf0d55648b20adb612be91962c","time":1751545651,"status":200,"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100630/kaiwu.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:27:33 [info] 43015#14406942: *5 [lua] log.lua:21: {"args":{},"uri":"\/kp\/c100371\/alzx.shtml","cache_key":"e3acfd07b93727f183fc971f895a42b4","time":1751545653,"status":200,"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100371/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100630/kaiwu.shtml"
+2025/07/03 20:27:33 [info] 43015#14406942: *5 [lua] log.lua:21: {"args":{},"uri":"\/kp\/c100379\/alzx.shtml","cache_key":"19665c6313983dbb9f58371a8bd23d3e","time":1751545653,"status":200,"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100379/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100371/alzx.shtml"
+2025/07/03 20:27:34 [info] 43015#14406942: *8 [lua] log.lua:21: {"args":{},"uri":"\/kp\/xwdt\/xwzxxym.shtml","cache_key":"02c10bb1fb2a0edba7668219215d25e9","time":1751545654,"status":200,"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/xwdt/xwzxxym.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:27:34 [info] 43015#14406942: *5 kevent() reported that client prematurely closed connection, so upstream connection is closed too while reading response header from upstream, client: 172.16.100.244, server: cache.example.com, request: "POST /queryList HTTP/1.1", upstream: "https://198.18.19.207:443/queryList", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:27:34 [info] 43015#14406942: *8 [lua] log.lua:21: {"args":{},"uri":"\/kp\/c100096\/tzzgx2022.html","cache_key":"196fe93d60b56004c3620f54710e3454","time":1751545654,"status":200,"cache_level":2,"cache_hit":true} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100096/tzzgx2022.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/xwdt/xwzxxym.shtml"
+2025/07/03 20:27:34 [info] 43017#14406944: *11 [lua] log.lua:21: {"uri":"\/noticejson\/notice.json","args":{},"status":304,"time":1751545654,"cache_hit":true,"cache_level":2,"cache_key":"5f61383e2532c96ccb9d7e8465398dd0"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/notice.json HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:27:34 [info] 43016#14406943: *10 [lua] log.lua:21: {"uri":"\/noticejson\/tempnotice.json","args":{},"status":304,"time":1751545654,"cache_hit":true,"cache_level":2,"cache_key":"fb17d6e5a4d50e0e2e59d92c804e6b9f"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/tempnotice.json HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:27:35 [info] 43015#14406942: *8 [lua] log.lua:21: {"args":{"id":"1650017651390418944"},"uri":"\/getManuscriptById","cache_key":"32063fabc44f0e25433e9444158bf4e4","time":1751545655,"status":304,"cache_hit":false} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651390418944 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651390418944", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:27:35 [info] 43016#14406943: *13 [lua] log.lua:21: {"uri":"\/getManuscriptById","args":{"id":"1650017651411390464"},"status":304,"time":1751545655,"cache_hit":false,"cache_key":"8bbf009c5ee1de214cb2ed4f177a2a93"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651411390464 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651411390464", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:27:35 [info] 43017#14406944: *12 [lua] log.lua:21: {"uri":"\/getManuscriptById","args":{"id":"1650017651314921472"},"status":304,"time":1751545655,"cache_hit":false,"cache_key":"171ef6a56eeb564437c01b4411bffc67"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651314921472 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651314921472", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:27:35 [info] 43017#14406944: *12 [lua] log.lua:21: {"uri":"\/kp\/c100098\/gywm.shtml","args":{},"status":200,"time":1751545655,"cache_hit":true,"cache_level":2,"cache_key":"99bbc222a4a901184ab4720d89edbbdf"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:27:35 [info] 43017#14406944: *12 [lua] log.lua:21: {"uri":"\/getManuscriptById","args":{"id":"1650017640317456384"},"status":304,"time":1751545655,"cache_hit":true,"cache_level":2,"cache_key":"19d8b3f2ab893362ad0bfcc9f2d49200"} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017640317456384 HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 3 (SIGQUIT) received from 45755, shutting down
+2025/07/03 20:34:19 [notice] 43008#14406933: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43016#14406943: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43011#14406937: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43017#14406944: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43016#14406943: exiting
+2025/07/03 20:34:19 [notice] 43013#14406939: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43007#14406932: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43008#14406933: exiting
+2025/07/03 20:34:19 [notice] 43009#14406935: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43015#14406942: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43011#14406937: exiting
+2025/07/03 20:34:19 [notice] 43010#14406936: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43017#14406944: exiting
+2025/07/03 20:34:19 [notice] 43007#14406932: exiting
+2025/07/03 20:34:19 [notice] 43015#14406942: exiting
+2025/07/03 20:34:19 [notice] 43014#14406941: gracefully shutting down
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43010#14406936: exiting
+2025/07/03 20:34:19 [notice] 43009#14406935: exiting
+2025/07/03 20:34:19 [notice] 43013#14406939: exiting
+2025/07/03 20:34:19 [notice] 43014#14406941: exiting
+2025/07/03 20:34:19 [notice] 43011#14406937: exit
+2025/07/03 20:34:19 [notice] 43010#14406936: exit
+2025/07/03 20:34:19 [notice] 43016#14406943: exit
+2025/07/03 20:34:19 [notice] 43008#14406933: exit
+2025/07/03 20:34:19 [notice] 43009#14406935: exit
+2025/07/03 20:34:19 [notice] 43007#14406932: exit
+2025/07/03 20:34:19 [notice] 43014#14406941: exit
+2025/07/03 20:34:19 [notice] 43017#14406944: exit
+2025/07/03 20:34:19 [notice] 43015#14406942: exit
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43010
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43011 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43010 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43009
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43009 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43008
+2025/07/03 20:34:19 [notice] 43013#14406939: exit
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43008 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43017
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43017 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43007
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43007 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43014
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43014 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43016
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43016 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43015
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43015 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received from 43013
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 23 (SIGIO) received
+2025/07/03 20:34:19 [notice] 43006#14406931: signal 20 (SIGCHLD) received from 43013
+2025/07/03 20:34:19 [notice] 43006#14406931: worker process 43013 exited with code 0
+2025/07/03 20:34:19 [notice] 43006#14406931: exit
+2025/07/03 20:34:21 [notice] 45783#14419018: using the "kqueue" event method
+2025/07/03 20:34:21 [notice] 45783#14419018: openresty/1.27.1.2
+2025/07/03 20:34:21 [notice] 45783#14419018: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:34:21 [notice] 45783#14419018: OS: Darwin 24.5.0
+2025/07/03 20:34:21 [notice] 45783#14419018: hw.ncpu: 10
+2025/07/03 20:34:21 [notice] 45783#14419018: net.inet.tcp.sendspace: 131072
+2025/07/03 20:34:21 [notice] 45783#14419018: kern.ipc.somaxconn: 128
+2025/07/03 20:34:21 [notice] 45783#14419018: hw.cachelinesize: 128
+2025/07/03 20:34:21 [notice] 45783#14419018: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker processes
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45785
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45786
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45787
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45788
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45789
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45791
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45792
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45793
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45794
+2025/07/03 20:34:21 [notice] 45784#14419021: start worker process 45795
+2025/07/03 20:34:21 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:34:21 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:34:25 [error] 45785#14419022: *1 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:29 [error] 45792#14419029: *3 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:29 [error] 45792#14419029: *2 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:29 [error] 45792#14419029: *5 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:29 [error] 45795#14419033: *6 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/cache/access.lua:1: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:29 [error] 45795#14419033: *6 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:30 [error] 45795#14419033: *7 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:21: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/keys HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:31 [error] 45787#14419024: *8 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:95: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/miss_urls HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:34:33 [error] 45793#14419031: *9 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:33 [error] 45793#14419031: *9 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:34 [error] 45792#14419029: *10 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:34 [error] 45792#14419029: *10 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:39 [error] 45792#14419029: *11 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:39 [error] 45792#14419029: *11 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:34:59 [error] 45785#14419022: *12 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:35:05 [error] 45794#14419032: *13 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:35:05 [error] 45794#14419032: *13 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:35:05 [error] 45794#14419032: *14 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:35:05 [error] 45794#14419032: *14 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081"
+2025/07/03 20:35:09 [error] 45794#14419032: *15 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	...Desktop/openresty-cache/lua/cache/site_cache_control.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:35:09 [error] 45794#14419032: *15 failed to run body_filter_by_lua*: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+	[C]: at 0x0104e6018c
+	[C]: in function 'require'
+	...s/sean/Desktop/openresty-cache/lua/cache/body_filter.lua:1: in main chunk, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:35:29 [error] 45789#14419026: *16 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:35:59 [error] 45793#14419031: *17 lua entry thread aborted: runtime error: error loading module 'cache_lib' from file '/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua':
+	/Users/sean/Desktop/openresty-cache//lua/lib/cache_lib.lua:659: '<eof>' expected near 'function'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:14: in function 'handler'
+	/Users/sean/Desktop/openresty-cache/lua/api/router.lua:194: in main chunk, client: 127.0.0.1, server: localhost, request: "GET /api/cache/stats HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/dashboard/"
+2025/07/03 20:36:09 [info] 45794#14419032: *18 [lua] log.lua:21: {"cache_hit":true,"uri":"\/kp\/zs\/pc\/list.html","cache_key":"095d25ac1698d910de7b0632126deca4","status":200,"args":{},"time":1751546169,"cache_level":2} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 3 (SIGQUIT) received from 46696, shutting down
+2025/07/03 20:36:25 [notice] 45785#14419022: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45787#14419024: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45787#14419024: exiting
+2025/07/03 20:36:25 [notice] 45788#14419025: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45788#14419025: exiting
+2025/07/03 20:36:25 [notice] 45789#14419026: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45789#14419026: exiting
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received from 45789
+2025/07/03 20:36:25 [notice] 45791#14419028: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45787#14419024: exit
+2025/07/03 20:36:25 [notice] 45786#14419023: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45785#14419022: exiting
+2025/07/03 20:36:25 [notice] 45793#14419031: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45792#14419029: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45793#14419031: exiting
+2025/07/03 20:36:25 [notice] 45794#14419032: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45786#14419023: exiting
+2025/07/03 20:36:25 [notice] 45789#14419026: exit
+2025/07/03 20:36:25 [notice] 45792#14419029: exiting
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45794#14419032: exiting
+2025/07/03 20:36:25 [notice] 45788#14419025: exit
+2025/07/03 20:36:25 [notice] 45795#14419033: gracefully shutting down
+2025/07/03 20:36:25 [notice] 45791#14419028: exiting
+2025/07/03 20:36:25 [notice] 45795#14419033: exiting
+2025/07/03 20:36:25 [notice] 45792#14419029: exit
+2025/07/03 20:36:25 [notice] 45786#14419023: exit
+2025/07/03 20:36:25 [notice] 45794#14419032: exit
+2025/07/03 20:36:25 [notice] 45793#14419031: exit
+2025/07/03 20:36:25 [notice] 45791#14419028: exit
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45787
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45787 exited with code 0
+2025/07/03 20:36:25 [notice] 45785#14419022: exit
+2025/07/03 20:36:25 [notice] 45795#14419033: exit
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45789
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45789 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45794
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45794 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45793 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45792
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45792 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45786 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45786
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45795
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45795 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45788 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45785 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45785
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received from 45791
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received from 45791
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received from 45791
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 20 (SIGCHLD) received from 45791
+2025/07/03 20:36:25 [notice] 45784#14419021: worker process 45791 exited with code 0
+2025/07/03 20:36:25 [notice] 45784#14419021: signal 23 (SIGIO) received from 45791
+2025/07/03 20:36:25 [notice] 45784#14419021: exit
+2025/07/03 20:36:27 [notice] 46730#14423371: using the "kqueue" event method
+2025/07/03 20:36:27 [notice] 46730#14423371: openresty/1.27.1.2
+2025/07/03 20:36:27 [notice] 46730#14423371: built by clang 17.0.0 (clang-1700.0.13.5)
+2025/07/03 20:36:27 [notice] 46730#14423371: OS: Darwin 24.5.0
+2025/07/03 20:36:27 [notice] 46730#14423371: hw.ncpu: 10
+2025/07/03 20:36:27 [notice] 46730#14423371: net.inet.tcp.sendspace: 131072
+2025/07/03 20:36:27 [notice] 46730#14423371: kern.ipc.somaxconn: 128
+2025/07/03 20:36:27 [notice] 46730#14423371: hw.cachelinesize: 128
+2025/07/03 20:36:27 [notice] 46730#14423371: getrlimit(RLIMIT_NOFILE): 1048575:9223372036854775807
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker processes
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46732
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46733
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46734
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46735
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46737
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46738
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46739
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46740
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46741
+2025/07/03 20:36:27 [notice] 46731#14423372: start worker process 46742
+2025/07/03 20:36:27 [notice] 46731#14423372: signal 23 (SIGIO) received from 46732
+2025/07/03 20:36:27 [notice] 46731#14423372: signal 23 (SIGIO) received
+2025/07/03 20:36:32 [info] 46741#14423384: *3 [lua] log.lua:21: {"uri":"\/kp\/c100630\/kaiwu.shtml","status":200,"cache_hit":true,"cache_key":"00f12cdf0d55648b20adb612be91962c","args":{},"cache_level":2,"time":1751546192} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100630/kaiwu.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:36:33 [info] 46741#14423384: *3 [lua] log.lua:21: {"uri":"\/kp\/zs\/pc\/list.html","status":200,"cache_hit":true,"cache_key":"095d25ac1698d910de7b0632126deca4","args":{},"cache_level":2,"time":1751546193} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/zs/pc/list.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100630/kaiwu.shtml"
+2025/07/03 20:36:34 [info] 46741#14423384: *3 [lua] log.lua:21: {"uri":"\/kp\/c100371\/alzx.shtml","status":200,"cache_hit":true,"cache_key":"e3acfd07b93727f183fc971f895a42b4","args":{},"cache_level":2,"time":1751546194} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100371/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/zs/pc/list.html"
+2025/07/03 20:36:34 [info] 46741#14423384: *3 [lua] log.lua:21: {"uri":"\/kp\/c100379\/alzx.shtml","status":200,"cache_hit":true,"cache_key":"19665c6313983dbb9f58371a8bd23d3e","args":{},"cache_level":2,"time":1751546194} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100379/alzx.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100371/alzx.shtml"
+2025/07/03 20:36:35 [info] 46741#14423384: *5 [lua] log.lua:21: {"uri":"\/kp\/xwdt\/xwzxxym.shtml","status":200,"cache_hit":true,"cache_key":"02c10bb1fb2a0edba7668219215d25e9","args":{},"cache_level":2,"time":1751546195} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/xwdt/xwzxxym.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:36:35 [info] 46741#14423384: *3 kevent() reported that client prematurely closed connection, so upstream connection is closed too while reading response header from upstream, client: 172.16.100.244, server: cache.example.com, request: "POST /queryList HTTP/1.1", upstream: "https://198.18.19.207:443/queryList", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100379/alzx.shtml"
+2025/07/03 20:36:35 [info] 46741#14423384: *5 [lua] log.lua:21: {"uri":"\/kp\/c100096\/tzzgx2022.html","status":200,"cache_hit":true,"cache_key":"196fe93d60b56004c3620f54710e3454","args":{},"cache_level":2,"time":1751546195} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100096/tzzgx2022.html HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/xwdt/xwzxxym.shtml"
+2025/07/03 20:36:35 [info] 46735#14423377: *7 [lua] log.lua:21: {"uri":"\/noticejson\/notice.json","args":{},"cache_level":2,"cache_hit":true,"status":304,"cache_key":"5f61383e2532c96ccb9d7e8465398dd0","time":1751546195} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/notice.json HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:36:35 [info] 46739#14423382: *10 [lua] log.lua:21: {"uri":"\/noticejson\/tempnotice.json","args":{},"cache_level":2,"cache_hit":true,"status":304,"cache_key":"fb17d6e5a4d50e0e2e59d92c804e6b9f","time":1751546195} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /noticejson/tempnotice.json HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:36:36 [info] 46741#14423384: *5 [lua] log.lua:21: {"uri":"\/getManuscriptById","status":304,"cache_hit":false,"cache_key":"32063fabc44f0e25433e9444158bf4e4","args":{"id":"1650017651390418944"},"time":1751546196} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651390418944 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651390418944", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:36:36 [info] 46740#14423383: *9 [lua] log.lua:21: {"uri":"\/getManuscriptById","args":{"id":"1650017651314921472"},"cache_hit":false,"status":304,"cache_key":"171ef6a56eeb564437c01b4411bffc67","time":1751546196} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651314921472 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651314921472", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:36:36 [info] 46734#14423376: *6 [lua] log.lua:21: {"uri":"\/getManuscriptById","args":{"id":"1650017651411390464"},"cache_hit":false,"status":304,"cache_key":"8bbf009c5ee1de214cb2ed4f177a2a93","time":1751546196} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017651411390464 HTTP/1.1", upstream: "https://198.18.19.207:443/getManuscriptById?id=1650017651411390464", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:36:36 [info] 46734#14423376: *6 [lua] log.lua:21: {"uri":"\/kp\/c100098\/gywm.shtml","args":{},"cache_level":2,"cache_hit":true,"status":200,"cache_key":"99bbc222a4a901184ab4720d89edbbdf","time":1751546196} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /kp/c100098/gywm.shtml HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100096/tzzgx2022.html"
+2025/07/03 20:36:36 [info] 46734#14423376: *6 [lua] log.lua:21: {"uri":"\/getManuscriptById","args":{"id":"1650017640317456384"},"cache_level":2,"cache_hit":true,"status":304,"cache_key":"19d8b3f2ab893362ad0bfcc9f2d49200","time":1751546196} while logging request, client: 172.16.100.244, server: cache.example.com, request: "GET /getManuscriptById?id=1650017640317456384 HTTP/1.1", host: "cache.example.com:8081", referrer: "http://cache.example.com:8081/kp/c100098/gywm.shtml"

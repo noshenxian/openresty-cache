@@ -28,7 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 绑定事件
     document.getElementById('refreshKeys').addEventListener('click', loadKeysData);
-    document.getElementById('keySearch').addEventListener('input', filterKeys);
+    // 修改搜索框的事件绑定，从input改为keyup和按钮点击
+    document.getElementById('keySearch').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') {
+        filterKeys();
+    }
+    });
+    
+    // 添加搜索按钮
+    document.getElementById('searchButton').addEventListener('click', filterKeys);
     document.getElementById('refreshMissUrls').addEventListener('click', loadMissUrlsData);
     document.getElementById('missUrlSearch').addEventListener('input', filterMissUrls);
     document.getElementById('flushButton').addEventListener('click', flushCache);
@@ -213,17 +221,24 @@ async function loadKeysData() {
 // 更新键列表表格
 function updateKeysTable(keys) {
     if (!keys || keys.length === 0) {
-        document.getElementById('keysTable').innerHTML = '<tr><td colspan="3">没有缓存键</td></tr>';
+        document.getElementById('keysTable').innerHTML = '<tr><td colspan="5">没有缓存键</td></tr>';
+        document.getElementById('deleteSelectedButton').disabled = true;
         return;
     }
     
     const keysHtml = keys.map(item => {
         const date = new Date(item.time * 1000);
         const formattedTime = date.toLocaleString();
+        const url = item.url || item.key;
+        const hitCount = item.hit_count || 0;
         
         return `
             <tr>
-                <td>${item.key}</td>
+                <td>
+                    <input type="checkbox" class="form-check-input key-checkbox" data-key="${item.key}">
+                </td>
+                <td>${url}</td>
+                <td>${hitCount}</td>
                 <td>${formattedTime}</td>
                 <td>
                     <button class="btn btn-sm btn-info view-cache" data-key="${item.key}">
@@ -253,24 +268,101 @@ function updateKeysTable(keys) {
             deleteCache(key);
         });
     });
+    
+    // 绑定复选框事件
+    document.querySelectorAll('.key-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', updateDeleteButtonState);
+    });
+    
+    // 绑定全选复选框事件
+    document.getElementById('selectAllKeys').addEventListener('change', function() {
+        const isChecked = this.checked;
+        document.querySelectorAll('.key-checkbox').forEach(checkbox => {
+            checkbox.checked = isChecked;
+        });
+        updateDeleteButtonState();
+    });
+    
+    updateDeleteButtonState();
+}
+
+// 更新删除按钮状态
+function updateDeleteButtonState() {
+    const checkedBoxes = document.querySelectorAll('.key-checkbox:checked');
+    const deleteButton = document.getElementById('deleteSelectedButton');
+    deleteButton.disabled = checkedBoxes.length === 0;
+}
+
+// 删除选中的缓存键
+async function deleteSelectedKeys() {
+    const checkedBoxes = document.querySelectorAll('.key-checkbox:checked');
+    if (checkedBoxes.length === 0) return;
+    
+    const keys = Array.from(checkedBoxes).map(checkbox => checkbox.getAttribute('data-key'));
+    
+    if (!confirm(`确定要删除选中的 ${keys.length} 个缓存键吗？`)) {
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/cache/batch_delete', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ keys: keys })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            alert(`成功删除 ${data.deleted_count} 个缓存键`);
+            loadKeysData(); // 重新加载键列表
+        } else {
+            alert(`部分删除失败: ${data.message}`);
+            console.error('删除缓存失败:', data.errors);
+            loadKeysData(); // 重新加载键列表
+        }
+    } catch (error) {
+        console.error('删除缓存失败:', error);
+        alert('删除缓存失败');
+    }
 }
 
 // 过滤键列表
-function filterKeys() {
-    const searchTerm = document.getElementById('keySearch').value.toLowerCase();
-    const rows = document.querySelectorAll('#keysTable tr');
+// 修改filterKeys函数为搜索缓存内容
+async function filterKeys() {
+    const searchTerm = document.getElementById('keySearch').value.trim();
+    if (!searchTerm) {
+        // 如果搜索词为空，加载所有键
+        loadKeysData();
+        return;
+    }
     
-    rows.forEach(row => {
-        const keyCell = row.querySelector('td:first-child');
-        if (!keyCell) return;
+    try {
+        // 显示加载状态
+        document.getElementById('keysTable').innerHTML = '<tr><td colspan="5">搜索中...</td></tr>';
         
-        const key = keyCell.textContent.toLowerCase();
-        if (key.includes(searchTerm)) {
-            row.style.display = '';
-        } else {
-            row.style.display = 'none';
+        // 调用搜索API
+        const response = await fetch(`/api/cache/search?keyword=${encodeURIComponent(searchTerm)}`);
+        const data = await response.json();
+        
+        if (data.error) {
+            document.getElementById('keysTable').innerHTML = `<tr><td colspan="5">搜索错误: ${data.error}</td></tr>`;
+            return;
         }
-    });
+        
+        // 更新表格
+        updateKeysTable(data.keys);
+        
+        // 显示搜索结果数量
+        if (data.keys.length === 0) {
+            document.getElementById('keysTable').innerHTML = '<tr><td colspan="5">没有找到匹配的缓存内容</td></tr>';
+        }
+    } catch (error) {
+        console.error('搜索缓存内容失败:', error);
+        document.getElementById('keysTable').innerHTML = '<tr><td colspan="5">搜索失败</td></tr>';
+    }
 }
 
 // 查看缓存详情
@@ -457,10 +549,39 @@ async function loadMissUrlsData() {
     }
 }
 
-// 更新未命中URL表格
+// 强制缓存URL
+async function forceCacheUrl(url) {
+    if (!confirm(`确定要强制缓存URL "${url}" 吗？`)) {
+        return;
+    }
+    
+    try {
+        const response = await fetch('/api/cache/force_cache', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ url: url })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            alert('URL已成功强制缓存');
+            loadMissUrlsData(); // 重新加载未命中URL列表
+        } else {
+            alert(`强制缓存失败: ${data.error || '未知错误'}`);
+        }
+    } catch (error) {
+        console.error('强制缓存URL失败:', error);
+        alert('强制缓存URL失败');
+    }
+}
+
+// 更新未命中URL表格，添加强制缓存按钮
 function updateMissUrlsTable(urls) {
     if (!urls || urls.length === 0) {
-        document.getElementById('missUrlsTable').innerHTML = '<tr><td colspan="4">没有未命中的URL</td></tr>';
+        document.getElementById('missUrlsTable').innerHTML = '<tr><td colspan="5">没有未命中的URL</td></tr>';
         return;
     }
     
@@ -476,11 +597,24 @@ function updateMissUrlsTable(urls) {
                 <td>${item.count}</td>
                 <td>${formattedFirstTime}</td>
                 <td>${formattedLastTime}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary force-cache-btn" data-url="${item.url}">
+                        <i class="bi bi-cloud-arrow-up"></i> 强制缓存
+                    </button>
+                </td>
             </tr>
         `;
     }).join('');
     
     document.getElementById('missUrlsTable').innerHTML = urlsHtml;
+    
+    // 绑定强制缓存按钮事件
+    document.querySelectorAll('.force-cache-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            forceCacheUrl(url);
+        });
+    });
 }
 
 // 过滤未命中URL
@@ -681,3 +815,5 @@ async function flushCacheWithButtonState() {
         setButtonLoading('flushButton', false);
     }
 }
+// 绑定删除选中项按钮事件
+document.getElementById('deleteSelectedButton').addEventListener('click', deleteSelectedKeys);

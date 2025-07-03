@@ -81,8 +81,12 @@
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
                                 <span>最近访问的缓存键</span>
+                                <!-- 修改搜索框部分，添加搜索按钮 -->
                                 <div class="input-group" style="width: 300px;">
-                                    <input type="text" id="keySearch" class="form-control" placeholder="搜索缓存键...">
+                                    <input type="text" id="keySearch" class="form-control" placeholder="搜索缓存内容...">
+                                    <button class="btn btn-outline-primary" type="button" id="searchButton">
+                                        <i class="bi bi-search"></i>
+                                    </button>
                                     <button class="btn btn-outline-secondary" type="button" id="refreshKeys">
                                         <i class="bi bi-arrow-clockwise"></i>
                                     </button>
@@ -90,17 +94,26 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <div class="mb-3">
+                                <button id="deleteSelectedButton" class="btn btn-danger" disabled>
+                                    <i class="bi bi-trash"></i> 删除选中项
+                                </button>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>缓存键</th>
+                                            <th>
+                                                <input type="checkbox" id="selectAllKeys" class="form-check-input">
+                                            </th>
+                                            <th>URL</th>
+                                            <th>命中次数</th>
                                             <th>最后访问时间</th>
                                             <th>操作</th>
                                         </tr>
                                     </thead>
                                     <tbody id="keysTable">
-                                        <tr><td colspan="3">加载中...</td></tr>
+                                        <tr><td colspan="5">加载中...</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -197,10 +210,11 @@
                                     <th>未命中次数</th>
                                     <th>首次未命中时间</th>
                                     <th>最近未命中时间</th>
+                                    <th>操作</th>
                                 </tr>
                             </thead>
                             <tbody id="missUrlsTable">
-                                <tr><td colspan="4">加载中...</td></tr>
+                                <tr><td colspan="5">加载中...</td></tr>
                             </tbody>
                         </table>
                     </div>

@@ -109,7 +109,82 @@ local routes = {
                 server_time = ngx.time()
             }
         end
-    }
+    },  -- 在这里添加逗号
+    ["/api/cache/batch_delete"] = {
+        POST = function()
+            ngx.req.read_body()
+            local data = ngx.req.get_body_data()
+            local args = data and cjson.decode(data) or {}
+            
+            local keys = args.keys or {}
+            local success_count = 0
+            local errors = {}
+            
+            local cache_lib = require "cache_lib"
+            
+            for _, key in ipairs(keys) do
+                local success, err = cache_lib.delete(key)
+                if success then
+                    success_count = success_count + 1
+                else
+                    table.insert(errors, { key = key, error = err })
+                end
+            end
+            
+            return { 
+                success = #errors == 0, 
+                message = success_count .. " 个缓存键已删除", 
+                deleted_count = success_count,
+                errors = errors
+            }
+        end
+    },
+    -- 在routes表中添加新的路由
+    ["/api/cache/search"] = {
+        GET = function()
+            local args = ngx.req.get_uri_args()
+            local keyword = args.keyword
+            
+            if not keyword then
+                ngx.status = 400
+                return { error = "Missing keyword parameter" }
+            end
+            
+            local cache_lib = require "cache_lib"
+            local results = cache_lib.search_cache_content(keyword)
+            
+            return { keys = results }
+        end
+    },
+    -- 在routes表中添加新的路由
+    ["api/cache/force_cache"] = {
+        POST = function()
+            ngx.req.read_body()
+            local data = ngx.req.get_body_data()
+            local args = data and cjson.decode(data) or {}
+            
+            local url = args.url
+            local content = args.content
+            local ttl = args.ttl
+            
+            if not url then
+                ngx.status = 400
+                return { error = "Missing URL parameter" }
+            end
+            
+            local cache_lib = require "cache_lib"
+            local success = cache_lib.force_cache_url(url, content, ttl)
+            
+            if success then
+                -- 从未命中URL列表中移除
+                cache_lib.remove_miss_url(url)
+                return { success = true, message = "URL has been force cached" }
+            else
+                ngx.status = 500
+                return { error = "Failed to force cache URL" }
+            end
+        end
+    },
 }
 
 -- 处理请求

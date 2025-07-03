@@ -266,6 +266,38 @@ function _M.set(key, value, metadata)
         metadata.expire_time = ngx.time() + metadata.ttl
     end
     
+    -- 保存原始URL
+    if not metadata.url and ngx.var then
+        local uri = ngx.var.uri
+        local args = ngx.req.get_uri_args()
+        local url = uri
+        
+        -- 添加查询参数到URL
+        if args and next(args) then
+            local args_str = ""
+            local args_arr = {}
+            
+            for k, v in pairs(args) do
+                if type(v) == "table" then
+                    for _, val in ipairs(v) do
+                        table.insert(args_arr, k .. "=" .. val)
+                    end
+                else
+                    table.insert(args_arr, k .. "=" .. v)
+                end
+            end
+            
+            table.sort(args_arr)  -- 排序以确保一致性
+            args_str = table.concat(args_arr, "&")
+            
+            if args_str ~= "" then
+                url = url .. "?" .. args_str
+            end
+        end
+        
+        metadata.url = url
+    end
+    
     -- 设置内存缓存
     if metadata.cacheable_memory ~= false then
         _M.set_to_memory(key, value, metadata)
@@ -348,14 +380,32 @@ function _M.delete_by_prefix(prefix)
             for _, key in ipairs(keys) do
                 table.insert(metadata_keys, key:gsub("^cache:", "metadata:"))
             end
-            red:del(unpack(metadata_keys))
+            if #metadata_keys > 0 then
+                red:del(unpack(metadata_keys))
+            end
         end
     until cursor == "0"
     
     redis_conn.close_connection(red)
     
-    -- 直接重置recent_keys为空数组，而不是尝试过滤
-    cache_stats:set("recent_keys", "[]")
+    -- 获取当前recent_keys
+    local recent_keys = cache_stats:get("recent_keys") or "{}"
+    local keys = cjson.decode(recent_keys)
+    
+    -- 清空recent_keys列表，但保留URL信息
+    local new_keys = {}
+    for _, item in ipairs(keys) do
+        -- 保留URL信息，但重置命中计数
+        table.insert(new_keys, {
+            key = item.key,
+            url = item.url,  -- 保留URL信息
+            hit_count = 0,   -- 重置命中计数
+            time = ngx.time() -- 更新时间
+        })
+    end
+    
+    -- 保存更新后的recent_keys
+    cache_stats:set("recent_keys", cjson.encode(new_keys))
     
     return true, count
 end
@@ -371,8 +421,39 @@ function _M.update_stats(key, stat_type)
         local recent_keys = cache_stats:get("recent_keys") or "{}"
         local keys = cjson.decode(recent_keys)
         
+        -- 检查键是否已存在
+        local exists = false
+        for i, item in ipairs(keys) do
+            if item.key == key then
+                -- 键已存在，更新计数和时间
+                item.hit_count = (item.hit_count or 0) + 1
+                item.time = ngx.time()
+                exists = true
+                break
+            end
+        end
+        
+        -- 如果键不存在，添加到列表
+        if not exists then
+            -- 尝试从元数据中获取URL
+            local url = key
+            local metadata_value = cache_metadata:get(key)
+            if metadata_value then
+                local metadata = cjson.decode(metadata_value)
+                if metadata.url then
+                    url = metadata.url
+                end
+            end
+            
+            table.insert(keys, 1, {
+                key = key,
+                url = url,
+                hit_count = 1,
+                time = ngx.time()
+            })
+        end
+        
         -- 保持最近访问的键列表（最多100个）
-        table.insert(keys, 1, {key = key, time = ngx.time()})
         if #keys > 100 then
             table.remove(keys)
         end
@@ -485,6 +566,131 @@ end
 function _M.get_miss_urls()
     local miss_urls_json = miss_urls:get("urls") or "{}"
     return cjson.decode(miss_urls_json)
+end
+
+-- 搜索缓存内容
+function _M.search_cache_content(keyword)
+    if not keyword or keyword == "" then
+        return {}
+    end
+    
+    local result = {}
+    keyword = string.lower(keyword)
+    
+    -- 首先搜索内存缓存
+    local memory_keys = cache_metadata:get_keys(0)
+    for _, key in ipairs(memory_keys) do
+        local metadata_value = cache_metadata:get(key)
+        if metadata_value then
+            local metadata = cjson.decode(metadata_value)
+            local value = metadata.value
+            
+            -- 检查缓存内容是否包含关键字
+            if value and type(value) == "string" and string.find(string.lower(value), keyword) then
+                local url = metadata.url or key
+                table.insert(result, {
+                    key = key,
+                    url = url,
+                    hit_count = metadata.hit_count or 0,
+                    time = metadata.updated_at or ngx.time(),
+                    source = "memory"
+                })
+            end
+        end
+    end
+    
+    -- 然后搜索Redis缓存
+    local red, err = redis_conn.get_connection()
+    if red then
+        local cursor = "0"
+        repeat
+            local res, err = red:scan(cursor, "MATCH", "cache:*", "COUNT", 100)
+            if not res then
+                break
+            end
+            
+            cursor = res[1]
+            local keys = res[2]
+            
+            for _, redis_key in ipairs(keys) do
+                local value, err = red:get(redis_key)
+                if value and value ~= ngx.null then
+                    -- 检查缓存内容是否包含关键字
+                    if string.find(string.lower(value), keyword) then
+                        local key = redis_key:gsub("^cache:", "")
+                        local metadata_key = "metadata:" .. key
+                        local metadata_json, err = red:get(metadata_key)
+                        
+                        local url = key
+                        local hit_count = 0
+                        local updated_at = ngx.time()
+                        
+                        if metadata_json and metadata_json ~= ngx.null then
+                            local metadata = cjson.decode(metadata_json)
+                            url = metadata.url or key
+                            hit_count = metadata.hit_count or 0
+                            updated_at = metadata.updated_at or ngx.time()
+                        end
+                        
+                        table.insert(result, {
+                            key = key,
+                            url = url,
+                            hit_count = hit_count,
+                            time = updated_at,
+                            source = "redis"
+                        })
+                    end
+                end
+            end
+        until cursor == "0"
+        
+        redis_conn.close_connection(red)
+    end
+    
+    -- 按最后访问时间排序
+    table.sort(result, function(a, b) return a.time > b.time end)
+    
+    return result
+end
+
+-- 强制缓存URL到Redis
+function _M.force_cache_url(url, content, ttl)
+    -- 生成缓存键
+    local key = ngx.md5(url)
+    
+    -- 设置元数据
+    local metadata = {
+        url = url,
+        force_cached = true,
+        redis_ttl = ttl or 3600, -- 默认1小时
+        memory_ttl = 60,         -- 内存缓存60秒
+        updated_at = ngx.time()
+    }
+    
+    -- 如果没有提供内容，使用默认内容
+    content = content or "This is a force cached content for URL: " .. url
+    
+    -- 设置缓存
+    return _M.set(key, content, metadata)
+end
+
+-- 从未命中URL列表中移除URL
+function _M.remove_miss_url(url)
+    local miss_urls_json = miss_urls:get("urls") or "{}"
+    local urls = cjson.decode(miss_urls_json)
+    local new_urls = {}
+    
+    -- 过滤掉要删除的URL
+    for _, item in ipairs(urls) do
+        if item.url ~= url then
+            table.insert(new_urls, item)
+        end
+    end
+    
+    -- 保存更新后的列表
+    miss_urls:set("urls", cjson.encode(new_urls))
+    
+    return true
 end
 
 return _M
