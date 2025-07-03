@@ -157,7 +157,7 @@ local routes = {
         end
     },
     -- 在routes表中添加新的路由
-    ["api/cache/force_cache"] = {
+    ["/api/cache/force_cache"] = {
         POST = function()
             ngx.req.read_body()
             local data = ngx.req.get_body_data()
