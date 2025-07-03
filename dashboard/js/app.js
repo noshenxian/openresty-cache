@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 绑定事件
     document.getElementById('refreshKeys').addEventListener('click', loadKeysData);
     document.getElementById('keySearch').addEventListener('input', filterKeys);
+    document.getElementById('refreshMissUrls').addEventListener('click', loadMissUrlsData);
+    document.getElementById('missUrlSearch').addEventListener('input', filterMissUrls);
     document.getElementById('flushButton').addEventListener('click', flushCache);
     document.getElementById('flushAllButton').addEventListener('click', flushAllCache);
     document.getElementById('deleteCache').addEventListener('click', deleteCurrentCache);
@@ -52,6 +54,8 @@ function showSection(sectionId) {
         loadDashboardData();
     } else if (sectionId === 'keys') {
         loadKeysData();
+    } else if (sectionId === 'miss_urls') {
+        loadMissUrlsData();
     }
 }
 
@@ -417,4 +421,60 @@ async function flushAllCache() {
         document.getElementById('flushResult').className = 'alert alert-danger';
         document.getElementById('flushResult').textContent = '清除缓存失败';
     }
+}
+
+// 加载未命中URL数据
+async function loadMissUrlsData() {
+    try {
+        const response = await fetch('/api/cache/miss_urls');
+        const data = await response.json();
+        
+        updateMissUrlsTable(data.urls);
+    } catch (error) {
+        console.error('加载未命中URL失败:', error);
+    }
+}
+
+// 更新未命中URL表格
+function updateMissUrlsTable(urls) {
+    if (!urls || urls.length === 0) {
+        document.getElementById('missUrlsTable').innerHTML = '<tr><td colspan="4">没有未命中的URL</td></tr>';
+        return;
+    }
+    
+    const urlsHtml = urls.map(item => {
+        const firstDate = new Date(item.first_time * 1000);
+        const lastDate = new Date(item.last_time * 1000);
+        const formattedFirstTime = firstDate.toLocaleString();
+        const formattedLastTime = lastDate.toLocaleString();
+        
+        return `
+            <tr>
+                <td>${item.url}</td>
+                <td>${item.count}</td>
+                <td>${formattedFirstTime}</td>
+                <td>${formattedLastTime}</td>
+            </tr>
+        `;
+    }).join('');
+    
+    document.getElementById('missUrlsTable').innerHTML = urlsHtml;
+}
+
+// 过滤未命中URL
+function filterMissUrls() {
+    const searchTerm = document.getElementById('missUrlSearch').value.toLowerCase();
+    const rows = document.querySelectorAll('#missUrlsTable tr');
+    
+    rows.forEach(row => {
+        const urlCell = row.querySelector('td:first-child');
+        if (!urlCell) return;
+        
+        const url = urlCell.textContent.toLowerCase();
+        if (url.includes(searchTerm)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
 }

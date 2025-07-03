@@ -89,6 +89,13 @@ local routes = {
                 count = count 
             }
         end
+    },
+    ["/api/cache/miss_urls"] = {
+        GET = function()
+            local cache_lib = require "cache_lib"
+            local miss_urls = cache_lib.get_miss_urls()
+            return { urls = miss_urls }
+        end
     }
 }
 

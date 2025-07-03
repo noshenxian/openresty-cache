@@ -1,9 +1,13 @@
 local redis_conn = require "redis_conn"
 local cjson = require "cjson"
 
+-- 在文件开头的共享内存区域声明下方添加
 local cache_metadata = ngx.shared.cache_metadata
 local cache_locks = ngx.shared.cache_locks
 local cache_stats = ngx.shared.cache_stats
+
+-- 添加这一行
+local miss_urls = ngx.shared.miss_urls  -- 存储未命中的URL
 
 local _M = {}
 
@@ -366,6 +370,68 @@ function _M.update_stats(key, stat_type)
         end
         
         cache_stats:set("recent_keys", cjson.encode(keys))
+    else
+        -- 记录未命中的URL
+        local uri = ngx.var.uri
+        local args = ngx.req.get_uri_args()
+        local url = uri
+        
+        -- 添加查询参数到URL
+        if args and next(args) then
+            local args_str = ""
+            local args_arr = {}
+            
+            for k, v in pairs(args) do
+                if type(v) == "table" then
+                    for _, val in ipairs(v) do
+                        table.insert(args_arr, k .. "=" .. val)
+                    end
+                else
+                    table.insert(args_arr, k .. "=" .. v)
+                end
+            end
+            
+            table.sort(args_arr)  -- 排序以确保一致性
+            args_str = table.concat(args_arr, "&")
+            
+            if args_str ~= "" then
+                url = url .. "?" .. args_str
+            end
+        end
+        
+        -- 获取当前未命中URL列表
+        local miss_urls_json = miss_urls:get("urls") or "{}"
+        local urls = cjson.decode(miss_urls_json)
+        
+        -- 检查URL是否已存在
+        local exists = false
+        for i, item in ipairs(urls) do
+            if item.url == url then
+                -- URL已存在，更新计数和时间
+                item.count = item.count + 1
+                item.last_time = ngx.time()
+                exists = true
+                break
+            end
+        end
+        
+        -- 如果URL不存在，添加到列表
+        if not exists then
+            table.insert(urls, 1, {
+                url = url,
+                count = 1,
+                first_time = ngx.time(),
+                last_time = ngx.time()
+            })
+            
+            -- 保持列表不超过100个
+            if #urls > 100 then
+                table.remove(urls)
+            end
+        end
+        
+        -- 保存更新后的列表
+        miss_urls:set("urls", cjson.encode(urls))
     end
 end
 
@@ -405,6 +471,12 @@ function _M.get_stats()
     end
     
     return stats
+end
+
+-- 添加获取未命中URL的函数
+function _M.get_miss_urls()
+    local miss_urls_json = miss_urls:get("urls") or "{}"
+    return cjson.decode(miss_urls_json)
 end
 
 return _M
